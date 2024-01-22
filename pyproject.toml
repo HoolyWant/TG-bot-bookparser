@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "webpegas test-case"
+version = "0.1.0"
+description = ""
+authors = ["hoolywant <sir.saltickow@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.9.1"
+sqlalchemy = "^2.0.25"
+aiogram = "^3.3.0"
+python-dotenv = "^1.0.0"
+pydantic-settings = "^2.1.0"
+asyncpg = "^0.29.0"
+bs4 = "^0.0.2"
+lxml = "^5.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
