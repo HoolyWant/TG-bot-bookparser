@@ -12,6 +12,7 @@ nest_asyncio.apply()
 router = Router()
 file = FSInputFile('parser.csv')
 
+
 @router.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer('Допро пожаловать в парсер-бот! Для регистрации и дальнейшей работы,'

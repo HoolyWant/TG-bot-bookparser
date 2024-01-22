@@ -13,6 +13,7 @@ from tg_core.handlers.basics import router
 BASE_DIR = Path(__file__).resolve().parent.parent
 dot_env = os.path.join(BASE_DIR, '.env')
 load_dotenv(dotenv_path=dot_env)
+DB_URL = f"postgresql+asyncpg://{os.getenv('DB_USER')}:{os.getenv('DB_PASS')}@{os.getenv('DB_HOST')}:5432/{os.getenv('DB_NAME')}"
 
 
 async def main():
@@ -24,6 +25,7 @@ async def main():
 
 
 if __name__ == "__main__":
+    print(DB_URL)
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     try:
         asyncio.run(main())
